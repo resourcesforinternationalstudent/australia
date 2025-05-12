@@ -6,33 +6,42 @@
     <title>Resources for International Students in Australia</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         header {
-            background: #35424a;
+            background: #0056b3;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            border-bottom: 5px solid #ffc107;
         }
         h1 {
             margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 5px;
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin: 20px 0;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .video-container iframe {
             position: absolute;
@@ -40,43 +49,113 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
+        }
+        .tip-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .tip-card h3 {
+            color: #0056b3;
+            margin-top: 0;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #35424a;
+            background: #0056b3;
             color: white;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        .resources-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .resources-list {
+                columns: 1;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Welcome to My Video Site</h1>
-            <p>A simple one-page website with embedded video</p>
+            <h1>International Student Housing Guide</h1>
+            <p>How to avoid poor living arrangements for better well-being and academic success</p>
         </div>
     </header>
 
     <div class="container">
-        <h2>Featured Video</h2>
-        <div class="video-container">
-            <!-- Replace with your video embed code -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8S0FDjFBj8o" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-        </div>
-        
-        <h2>About This Video</h2>
-        <p>This is a description of your video content. Replace this text with your own description 
-           explaining what the video is about and why visitors should watch it.</p>
-        
-        <h2>More Information</h2>
-        <p>Add any additional information, links, or content you'd like to include on your one-page site.</p>
+        <section>
+            <h2>Key Challenges</h2>
+            <p>International students often face housing challenges including high costs, unfamiliar rental systems, language barriers, and cultural differences. Poor living conditions can negatively impact mental health, academic performance, and overall study abroad experience.</p>
+            
+            <div class="video-container">
+                <!-- Replace with your actual video embed code -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8S0FDjFBj8o" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Essential Tips</h2>
+            
+            <div class="tip-card">
+                <h3>1. Start Your Search Early</h3>
+                <p>Begin looking at least 3-4 months before your arrival. Contact your university's international student office for housing resources and recommendations.</p>
+            </div>
+            
+            <div class="tip-card">
+                <h3>2. Understand the Rental Market</h3>
+                <p>Research average prices, common lease terms, and tenant rights in your host country. Be wary of deals that seem too good to be true.</p>
+            </div>
+            
+            <div class="tip-card">
+                <h3>3. Verify Before Committing</h3>
+                <p>Always visit the property in person or arrange a virtual tour. Never send money without verifying the landlord's identity and property ownership.</p>
+            </div>
+            
+            <div class="tip-card">
+                <h3>4. Consider Location Carefully</h3>
+                <p>Balance affordability with proximity to campus, public transportation, and essential services. Calculate commute times realistically.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Red Flags to Avoid</h2>
+            <ul>
+                <li>Landlords who refuse to show the property</li>
+                <li>Requests for large deposits without proper documentation</li>
+                <li>Properties with obvious maintenance issues</li>
+                <li>Unusually low prices compared to market rates</li>
+                <li>Pressure to sign contracts immediately</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Additional Resources</h2>
+            <div class="resources-list">
+                <ul>
+                    <li><a href="https://www.internationalstudent.com/" target="_blank">InternationalStudent.com Housing Guide</a></li>
+                    <li><a href="https://www.studyinternational.com/" target="_blank">Study International Housing Tips</a></li>
+                    <li>Your university's international student services</li>
+                    <li>Local student housing Facebook groups</li>
+                    <li>Country-specific tenant rights organizations</li>
+                    <li>Student union housing advice services</li>
+                </ul>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <p>&copy; 2023 My Video Site. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2023 International Student Housing Guide. This project is part of research into improving student well-being.</p>
+            <p>For more information, please contact: housingresearch@example.com</p>
+        </div>
     </footer>
 </body>
 </html>
