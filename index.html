@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources for International Students in Australia</title>
+    <title>International Student Housing Guide</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,14 +39,13 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin: 30px auto; /* Centered */
-            border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Soft shadow */
-            background: #000; /* Black background */
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .video-container iframe {
             position: absolute;
-            top: -10px; /* Adjust to hide watermark */
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
@@ -63,75 +62,64 @@
             color: #0056b3;
             margin-top: 0;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0056b3;
-            color: white;
-            margin-top: 30px;
-        }
         .resources-list {
             columns: 2;
             column-gap: 30px;
         }
-        @media (max-width: 768px) {
-            .resources-list {
-                columns: 1;
-            }
-        }
-
+        
         /* Presentation Slideshow Styles */
+        .presentation-section {
+            background: #f0f8ff;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
         .presentation-container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 0 auto;
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             border-radius: 8px;
             overflow: hidden;
             background: white;
         }
-        
         .presentation-slide {
             display: none;
             padding: 40px;
             min-height: 400px;
         }
-        
         .slide-title {
             color: #0056b3;
             border-bottom: 2px solid #ffc107;
             padding-bottom: 10px;
             margin-top: 0;
         }
-        
         .slide-content {
             display: flex;
             align-items: center;
             gap: 30px;
         }
-        
+        .text-only {
+            text-align: center;
+            padding: 20px 40px;
+        }
         .slide-text {
             flex: 1;
         }
-        
         .slide-image {
             flex: 1;
             text-align: center;
         }
-        
         .slide-image img {
             max-width: 100%;
             max-height: 300px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
         .slide-nav {
             text-align: center;
             padding: 20px;
             background: #f5f5f5;
         }
-        
         .slide-nav button {
             background: #0056b3;
             color: white;
@@ -143,16 +131,13 @@
             font-size: 16px;
             transition: background 0.3s;
         }
-        
         .slide-nav button:hover {
             background: #003d7a;
         }
-        
         .slide-indicators {
             display: inline-block;
             margin: 0 20px;
         }
-        
         .indicator {
             display: inline-block;
             width: 12px;
@@ -162,18 +147,77 @@
             margin: 0 5px;
             cursor: pointer;
         }
-        
         .indicator.active {
             background: #0056b3;
         }
         
+        /* Modal Popup Styles */
+        .modal-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-modal:hover {
+            color: black;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0056b3;
+            color: white;
+        }
+
         @media (max-width: 768px) {
+            .resources-list {
+                columns: 1;
+            }
             .slide-content {
                 flex-direction: column;
             }
             .slide-image {
                 order: -1;
                 margin-bottom: 20px;
+            }
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
             }
         }
     </style>
@@ -190,22 +234,12 @@
         <section>
             <h2>Key Challenges</h2>
             <p>International students often face housing challenges including high costs, unfamiliar rental systems, language barriers, and cultural differences. Poor living conditions can negatively impact mental health, academic performance, and overall study abroad experience.</p>
-
-<!--             <div class="video-container">
-                 Replace with your actual video embed code
-               <iframe width="560" height="315"  src="https://www.kapwing.com/e/6821e025a7cc9c7332b02b65"
+            
+            <div class="video-container">
+                <!-- Replace with your actual video embed code -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE_VIDEO_ID" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
-                
-            </div> -->
-            <div class="video-container">
-                <iframe 
-                    allow="autoplay; gyroscope;" 
-                    allowfullscreen 
-                    referrerpolicy="strict-origin" 
-                    src="https://www.kapwing.com/e/6821e025a7cc9c7332b02b65" 
-                    title="">
-                </iframe>
             </div>
         </section>
 
@@ -226,43 +260,68 @@
                 <h3>3. Verify Before Committing</h3>
                 <p>Always visit the property in person or arrange a virtual tour. Never send money without verifying the landlord's identity and property ownership.</p>
             </div>
-            
-            <div class="tip-card">
-                <h3>4. Consider Location Carefully</h3>
-                <p>Balance affordability with proximity to campus, public transportation, and essential services. Calculate commute times realistically.</p>
-            </div>
         </section>
 
-        <section>
-            <h2>Red Flags to Avoid</h2>
-            <ul>
-                <li>Landlords who refuse to show the property</li>
-                <li>Requests for large deposits without proper documentation</li>
-                <li>Properties with obvious maintenance issues</li>
-                <li>Unusually low prices compared to market rates</li>
-                <li>Pressure to sign contracts immediately</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Additional Resources</h2>
-            <div class="resources-list">
-                <ul>
-                    <li><a href="https://www.internationalstudent.com/" target="_blank">InternationalStudent.com Housing Guide</a></li>
-                    <li><a href="https://www.studyinternational.com/" target="_blank">Study International Housing Tips</a></li>
-                    <li>Your university's international student services</li>
-                    <li>Local student housing Facebook groups</li>
-                    <li>Country-specific tenant rights organizations</li>
-                    <li>Student union housing advice services</li>
-                </ul>
+        <!-- Presentation Slideshow Section -->
+        <section class="presentation-section">
+            <div class="container">
+                <h2>Research Presentation</h2>
+                
+                <!-- Button to open modal slideshow -->
+                <button class="modal-btn" id="openSlideshow">View Full Presentation</button>
+                
+                <!-- Inline Slideshow (Mini Preview) -->
+                <div class="presentation-container">
+                    <!-- Slide 1: Title Slide -->
+                    <div class="presentation-slide">
+                        <h3 class="slide-title">International Student Housing Challenges</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p><strong>Research Question:</strong> How can international students avoid poor living arrangements?</p>
+                                <ul>
+                                    <li>Surveyed 150+ international students</li>
+                                    <li>Analyzed rental market data</li>
+                                    <li>Interviewed housing officers</li>
+                                </ul>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Students on campus">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Text Only -->
+                    <div class="presentation-slide">
+                        <h3 class="slide-title">Key Statistics</h3>
+                        <div class="text-only">
+                            <div class="tip-card">
+                                <p>63% of students reported housing issues affected their studies</p>
+                            </div>
+                            <div class="tip-card">
+                                <p>Students using university resources had 41% fewer problems</p>
+                            </div>
+                            <div class="tip-card">
+                                <p>Early planners saved 23% more on housing costs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="slide-nav">
+                        <button onclick="plusSlides(-1)">Previous</button>
+                        <div class="slide-indicators" id="slideIndicators"></div>
+                        <button onclick="plusSlides(1)">Next</button>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
-    <!-- Research Presentation Slideshow -->
-    <section class="presentation-section">
-        <div class="container">
-            <h2>Research Presentation</h2>
+    <!-- Modal Popup Slideshow -->
+    <div id="presentationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
             <div class="presentation-container">
                 <!-- Slide 1: Title Slide -->
                 <div class="presentation-slide">
@@ -291,7 +350,6 @@
                                 <li><strong>63%</strong> of students reported housing issues affected their studies</li>
                                 <li>Top challenges: High costs (72%), scams (38%), cultural mismatch (29%)</li>
                                 <li>Students who used university resources had <strong>41% fewer</strong> housing problems</li>
-                                <li>Early planners saved <strong>23% more</strong> on housing costs</li>
                             </ol>
                         </div>
                         <div class="slide-image">
@@ -300,116 +358,162 @@
                     </div>
                 </div>
                 
-                <!-- Slide 3: Recommendations -->
+                <!-- Slide 3: Text Only -->
                 <div class="presentation-slide">
-                    <h3 class="slide-title">Recommendations</h3>
-                    <div class="slide-content">
-                        <div class="slide-text">
-                            <div class="tip-card">
-                                <h4>For Students:</h4>
-                                <ul>
-                                    <li>Start searching 4-6 months before arrival</li>
-                                    <li>Always visit/virtually tour before paying</li>
-                                    <li>Use university-verified housing services</li>
-                                </ul>
-                            </div>
-                            <div class="tip-card">
-                                <h4>For Universities:</h4>
-                                <ul>
-                                    <li>Develop pre-arrival housing workshops</li>
-                                    <li>Create vetted landlord databases</li>
-                                    <li>Offer temporary housing options</li>
-                                </ul>
-                            </div>
+                    <h3 class="slide-title">Student Testimonials</h3>
+                    <div class="text-only">
+                        <div class="tip-card">
+                            <blockquote>"I didn't realize how important location was until I spent 3 hours daily commuting."</blockquote>
+                            <p>- Maria, Brazil (Computer Science)</p>
                         </div>
-                        <div class="slide-image">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team meeting">
+                        <div class="tip-card">
+                            <blockquote>"The housing scam left me homeless for 2 weeks during finals."</blockquote>
+                            <p>- Ahmed, Nigeria (Economics)</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Slide 4: Conclusion -->
+                <!-- Slide 4: Recommendations -->
                 <div class="presentation-slide">
-                    <h3 class="slide-title">Conclusion & Next Steps</h3>
-                    <div class="slide-content">
-                        <div class="slide-text">
-                            <p>Quality housing significantly impacts international student success. Our research shows:</p>
+                    <h3 class="slide-title">Recommendations</h3>
+                    <div class="text-only">
+                        <div class="tip-card">
+                            <h4>For Students:</h4>
                             <ul>
-                                <li>Proactive planning prevents most common issues</li>
-                                <li>Institutional support is crucial for vulnerable students</li>
-                                <li>Better information sharing needed across sectors</li>
+                                <li>Start searching 4-6 months before arrival</li>
+                                <li>Always visit/virtually tour before paying</li>
+                                <li>Use university-verified housing services</li>
                             </ul>
-                            <p><strong>Next Phase:</strong> Developing a housing matching platform with cultural compatibility metrics.</p>
                         </div>
-                        <div class="slide-image">
-                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Roadmap">
+                        <div class="tip-card">
+                            <h4>For Universities:</h4>
+                            <ul>
+                                <li>Develop pre-arrival housing workshops</li>
+                                <li>Create vetted landlord databases</li>
+                                <li>Offer temporary housing options</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Navigation -->
                 <div class="slide-nav">
-                    <button onclick="plusPresentationSlides(-1)">Previous</button>
-                    <div class="slide-indicators" id="slideIndicators"></div>
-                    <button onclick="plusPresentationSlides(1)">Next</button>
+                    <button onclick="plusModalSlides(-1)">Previous</button>
+                    <div class="slide-indicators" id="modalIndicators"></div>
+                    <button onclick="plusModalSlides(1)">Next</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Slideshow JavaScript -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 International Student Housing Guide. This project is part of research into improving student well-being.</p>
+            <p>For more information, please contact: housingresearch@example.com</p>
+        </div>
+    </footer>
+
     <script>
-        let presentationSlideIndex = 1;
-        showPresentationSlides(presentationSlideIndex);
+        // Inline Slideshow Functionality
+        let slideIndex = 1;
+        showSlides(slideIndex);
         
-        // Create indicators dynamically
-        const slides = document.getElementsByClassName("presentation-slide");
-        const indicatorContainer = document.getElementById("slideIndicators");
-        
-        for (let i = 0; i < slides.length; i++) {
-            const indicator = document.createElement("span");
-            indicator.className = "indicator";
-            indicator.onclick = function() { currentPresentationSlide(i + 1) };
-            indicatorContainer.appendChild(indicator);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
         
-        function plusPresentationSlides(n) {
-            showPresentationSlides(presentationSlideIndex += n);
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
         }
         
-        function currentPresentationSlide(n) {
-            showPresentationSlides(presentationSlideIndex = n);
-        }
-        
-        function showPresentationSlides(n) {
+        function showSlides(n) {
             let i;
-            if (n > slides.length) { presentationSlideIndex = 1 }
-            if (n < 1) { presentationSlideIndex = slides.length }
+            const slides = document.querySelectorAll(".presentation-section .presentation-slide");
+            const indicators = document.querySelectorAll(".presentation-section .indicator");
             
-            // Hide all slides
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            
-            // Update indicators
-            const indicators = document.getElementsByClassName("indicator");
             for (i = 0; i < indicators.length; i++) {
-                indicators[i].className = indicators[i].className.replace(" active", "");
+                indicators[i].classList.remove("active");
             }
             
-            // Show current slide
-            slides[presentationSlideIndex - 1].style.display = "block";
-            indicators[presentationSlideIndex - 1].className += " active";
+            slides[slideIndex - 1].style.display = "block";
+            indicators[slideIndex - 1].classList.add("active");
+        }
+        
+        // Create indicators for inline slideshow
+        const inlineSlides = document.querySelectorAll(".presentation-section .presentation-slide");
+        const inlineIndicatorContainer = document.getElementById("slideIndicators");
+        
+        for (let i = 0; i < inlineSlides.length; i++) {
+            const indicator = document.createElement("span");
+            indicator.className = "indicator";
+            indicator.onclick = function() { currentSlide(i + 1) };
+            inlineIndicatorContainer.appendChild(indicator);
+        }
+        
+        // Modal Slideshow Functionality
+        const modal = document.getElementById("presentationModal");
+        const btn = document.getElementById("openSlideshow");
+        const span = document.getElementsByClassName("close-modal")[0];
+        
+        btn.onclick = function() {
+            modal.style.display = "block";
+            showModalSlides(modalSlideIndex);
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        let modalSlideIndex = 1;
+        
+        function plusModalSlides(n) {
+            showModalSlides(modalSlideIndex += n);
+        }
+        
+        function showModalSlides(n) {
+            let i;
+            const slides = document.querySelectorAll("#presentationModal .presentation-slide");
+            const indicators = document.querySelectorAll("#presentationModal .indicator");
+            
+            if (n > slides.length) { modalSlideIndex = 1 }
+            if (n < 1) { modalSlideIndex = slides.length }
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < indicators.length; i++) {
+                indicators[i].classList.remove("active");
+            }
+            
+            slides[modalSlideIndex - 1].style.display = "block";
+            indicators[modalSlideIndex - 1].classList.add("active");
+        }
+        
+        // Create indicators for modal slideshow
+        const modalSlides = document.querySelectorAll("#presentationModal .presentation-slide");
+        const modalIndicatorContainer = document.getElementById("modalIndicators");
+        
+        for (let i = 0; i < modalSlides.length; i++) {
+            const indicator = document.createElement("span");
+            indicator.className = "indicator";
+            indicator.onclick = function() { 
+                modalSlideIndex = i + 1;
+                showModalSlides(modalSlideIndex);
+            };
+            modalIndicatorContainer.appendChild(indicator);
         }
     </script>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 International Student Housing Guide. This project is part of research into improving student well-being.</p>
-            <p>For more information, please contact: help.internationalstudents.au@gmail.com</p>
-        </div>
-    </footer>
 </body>
-
-
-
 </html>
