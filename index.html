@@ -79,6 +79,103 @@
                 columns: 1;
             }
         }
+
+        /* Presentation Slideshow Styles */
+        .presentation-container {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .presentation-slide {
+            display: none;
+            padding: 40px;
+            min-height: 400px;
+        }
+        
+        .slide-title {
+            color: #0056b3;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .slide-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .slide-text {
+            flex: 1;
+        }
+        
+        .slide-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .slide-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .slide-nav {
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .slide-nav button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .slide-nav button:hover {
+            background: #003d7a;
+        }
+        
+        .slide-indicators {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .indicator.active {
+            background: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .slide-content {
+                flex-direction: column;
+            }
+            .slide-image {
+                order: -1;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -162,40 +259,149 @@
         </section>
     </div>
 
-    <!-- Slideshow Section -->
-    <section class="slideshow-section">
-        <h2>Student Housing Options</h2>
-        <div class="slideshow-container">
-            <!-- Slide 1 -->
-            <div class="mySlides fade">
-                <img src="https://example.com/housing1.jpg" style="width:100%">
-                <div class="slide-text">University Dorms - Safe but often expensive</div>
+    <!-- Research Presentation Slideshow -->
+    <section class="presentation-section">
+        <div class="container">
+            <h2>Research Presentation</h2>
+            <div class="presentation-container">
+                <!-- Slide 1: Title Slide -->
+                <div class="presentation-slide">
+                    <h3 class="slide-title">International Student Housing Challenges</h3>
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <p><strong>Research Question:</strong> How can international students avoid poor living arrangements for their better well-being and academic success?</p>
+                            <ul>
+                                <li>Conducted surveys with 150+ international students</li>
+                                <li>Interviewed university housing officers</li>
+                                <li>Analyzed rental market data in 3 countries</li>
+                            </ul>
+                        </div>
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Students on campus">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Key Findings -->
+                <div class="presentation-slide">
+                    <h3 class="slide-title">Key Findings</h3>
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <ol>
+                                <li><strong>63%</strong> of students reported housing issues affected their studies</li>
+                                <li>Top challenges: High costs (72%), scams (38%), cultural mismatch (29%)</li>
+                                <li>Students who used university resources had <strong>41% fewer</strong> housing problems</li>
+                                <li>Early planners saved <strong>23% more</strong> on housing costs</li>
+                            </ol>
+                        </div>
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Data analysis">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Recommendations -->
+                <div class="presentation-slide">
+                    <h3 class="slide-title">Recommendations</h3>
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="tip-card">
+                                <h4>For Students:</h4>
+                                <ul>
+                                    <li>Start searching 4-6 months before arrival</li>
+                                    <li>Always visit/virtually tour before paying</li>
+                                    <li>Use university-verified housing services</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4>For Universities:</h4>
+                                <ul>
+                                    <li>Develop pre-arrival housing workshops</li>
+                                    <li>Create vetted landlord databases</li>
+                                    <li>Offer temporary housing options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team meeting">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Conclusion -->
+                <div class="presentation-slide">
+                    <h3 class="slide-title">Conclusion & Next Steps</h3>
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <p>Quality housing significantly impacts international student success. Our research shows:</p>
+                            <ul>
+                                <li>Proactive planning prevents most common issues</li>
+                                <li>Institutional support is crucial for vulnerable students</li>
+                                <li>Better information sharing needed across sectors</li>
+                            </ul>
+                            <p><strong>Next Phase:</strong> Developing a housing matching platform with cultural compatibility metrics.</p>
+                        </div>
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Roadmap">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="slide-nav">
+                    <button onclick="plusPresentationSlides(-1)">Previous</button>
+                    <div class="slide-indicators" id="slideIndicators"></div>
+                    <button onclick="plusPresentationSlides(1)">Next</button>
+                </div>
             </div>
-            
-            <!-- Slide 2 -->
-            <div class="mySlides fade">
-                <img src="https://example.com/housing2.jpg" style="width:100%">
-                <div class="slide-text">Shared Apartments - Balance of cost and privacy</div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="mySlides fade">
-                <img src="https://example.com/housing3.jpg" style="width:100%">
-                <div class="slide-text">Homestays - Cultural immersion opportunity</div>
-            </div>
-            
-            <!-- Navigation arrows -->
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-        
-        <!-- Dots navigation -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
+
+    <!-- Slideshow JavaScript -->
+    <script>
+        let presentationSlideIndex = 1;
+        showPresentationSlides(presentationSlideIndex);
+        
+        // Create indicators dynamically
+        const slides = document.getElementsByClassName("presentation-slide");
+        const indicatorContainer = document.getElementById("slideIndicators");
+        
+        for (let i = 0; i < slides.length; i++) {
+            const indicator = document.createElement("span");
+            indicator.className = "indicator";
+            indicator.onclick = function() { currentPresentationSlide(i + 1) };
+            indicatorContainer.appendChild(indicator);
+        }
+        
+        function plusPresentationSlides(n) {
+            showPresentationSlides(presentationSlideIndex += n);
+        }
+        
+        function currentPresentationSlide(n) {
+            showPresentationSlides(presentationSlideIndex = n);
+        }
+        
+        function showPresentationSlides(n) {
+            let i;
+            if (n > slides.length) { presentationSlideIndex = 1 }
+            if (n < 1) { presentationSlideIndex = slides.length }
+            
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Update indicators
+            const indicators = document.getElementsByClassName("indicator");
+            for (i = 0; i < indicators.length; i++) {
+                indicators[i].className = indicators[i].className.replace(" active", "");
+            }
+            
+            // Show current slide
+            slides[presentationSlideIndex - 1].style.display = "block";
+            indicators[presentationSlideIndex - 1].className += " active";
+        }
+    </script>
     <footer>
         <div class="container">
             <p>&copy; 2025 International Student Housing Guide. This project is part of research into improving student well-being.</p>
@@ -205,38 +411,5 @@
 </body>
 
 
-<!-- Slideshow JavaScript -->
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-    }
-    
-    // Auto-advance slides (every 5 seconds)
-    setInterval(function() {
-        plusSlides(1);
-    }, 5000);
-</script>
+
 </html>
