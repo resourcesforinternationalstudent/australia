@@ -162,6 +162,40 @@
         </section>
     </div>
 
+    <!-- Slideshow Section -->
+    <section class="slideshow-section">
+        <h2>Student Housing Options</h2>
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="mySlides fade">
+                <img src="https://example.com/housing1.jpg" style="width:100%">
+                <div class="slide-text">University Dorms - Safe but often expensive</div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="mySlides fade">
+                <img src="https://example.com/housing2.jpg" style="width:100%">
+                <div class="slide-text">Shared Apartments - Balance of cost and privacy</div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="mySlides fade">
+                <img src="https://example.com/housing3.jpg" style="width:100%">
+                <div class="slide-text">Homestays - Cultural immersion opportunity</div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        
+        <!-- Dots navigation -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <p>&copy; 2025 International Student Housing Guide. This project is part of research into improving student well-being.</p>
@@ -169,4 +203,40 @@
         </div>
     </footer>
 </body>
+
+
+<!-- Slideshow JavaScript -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+    
+    // Auto-advance slides (every 5 seconds)
+    setInterval(function() {
+        plusSlides(1);
+    }, 5000);
+</script>
 </html>
