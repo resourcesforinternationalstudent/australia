@@ -6,6 +6,20 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+        .media-block__collage {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .media-block__collage img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
        .bold-list {
             list-style-type: none;
             counter-reset: list-counter;
@@ -453,9 +467,17 @@
 
         <section>
             <div class="media-block">
+                <!---
                 <div class="media-block__image">
-<!--                     <img src="/images/section3_flyer.jpg" alt="Rental tips illustration"> -->
                     <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/section3_flyer.jpg" alt="Rental tips illustration">
+                </div>
+                --->
+                <!-- New Collage Section -->
+                <div class="media-block__collage">
+                    <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/slideshow/beatty_lodge.jpg" alt="Image 1">
+                    <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/slideshow/campus_perth.jpg" alt="Image 2">
+                    <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/slideshow/switch.jpg" alt="Image 3">
+                    <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/slideshow/yugo.jpg" alt="Image 4">
                 </div>
                 <div class="media-block__content">
                     <h3><strong>Promoting and Enforcing Off-Campus Housing Standards</strong></h3>
