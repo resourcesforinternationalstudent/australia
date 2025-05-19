@@ -318,6 +318,7 @@
 <!--                     <img src="/images/_0000_artboard-2.jpg" alt="Rental tips illustration"> -->
                     <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/_0000_artboard-2.jpg" alt="Rental tips illustration">
                 </div>
+                <p>How do poor living arrangements—such as overcrowding, unstable housing, or lack of basic amenities, noise disturbance—affect students' wellbeing and academic performance?</p>
                 <div class="media-block__content">
                     <h3><strong>Challenges faced by International Students</strong></h3>
                     <ol>
@@ -624,6 +625,14 @@
             };
             modalIndicatorContainer.appendChild(indicator);
         }
+        document.addEventListener('DOMContentLoaded', function() {
+          // Apply background images from data attributes
+          const bgSections = document.querySelectorAll('section[data-bg-image]');
+          bgSections.forEach(section => {
+            const imageUrl = section.getAttribute('data-bg-image');
+            section.style.backgroundImage = imageUrl;
+          });
+        });
     </script>
 </body>
 </html>
