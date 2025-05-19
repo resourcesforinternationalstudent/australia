@@ -239,6 +239,29 @@
         .media-block--right {
             flex-direction: row-reverse;
         }
+
+        [data-bg-image] {
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          padding: 3rem 0;
+        }
+        
+        [data-bg-image]::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.3);
+          z-index: 0;
+        }
+        
+        [data-bg-image] > * {
+          position: relative;
+          z-index: 1;
+        }
         
         @media (max-width: 768px) {
             .media-block {
@@ -420,13 +443,11 @@
             </div>
         </section>
 
-        <section>
-            <div class="media-block media-block--right">
-                <div class="media-block__image">
-<!--                     <img src="/images/section3_bg_image.jpg" alt="Rental tips illustration"> -->
-                    <img src="https://github.com/resourcesforinternationalstudents/australia/raw/main/images/section_bg_image.jpg" alt="Rental tips illustration">
-                </div>
-                <div class="media-block__content">
+
+        <section data-bg-image="url('https://github.com/resourcesforinternationalstudents/australia/raw/main/images/section_bg_image.jpg')">
+            <div class="section-content">
+                <div class="media-block media-block--right">
+                  <div class="media-block__content">
                     <h3><strong>Supporting Students Facing Financial Stress from High Rent Costs</strong></h3>
                     <p>How can universities support students who face financial hardship due to high rent costs?</p>
                     <ol>
@@ -436,6 +457,7 @@
                         <li>UWA Guild aid to support every student’s issue and stand with them till resolution.</li>
                         <li>Advocate for government policies that promote affordable student housing.</li>
                     </ol>
+                </div>
                 </div>
             </div>
         </section>
