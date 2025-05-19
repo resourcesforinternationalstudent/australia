@@ -240,11 +240,13 @@
         }
 
         .media-block__content {
-            flex: 1;
+            float: left;
+            margin-right: 20px;
         }
 
         .media-block__image {
-            flex: 1;
+/*             flex: 1; */
+            overflow: hidden; /* Ensures proper wrapping around the image */
         }
 
         .media-block__image img {
