@@ -10,14 +10,20 @@
             counter-reset: list-counter;
         }
         
-        .bold-list li {
+        .bold-list > li {
             counter-increment: list-counter;
         }
         
-        .bold-list li::before {
+        .bold-list > li::before {
             content: counter(list-counter) ". ";
             font-weight: bold;
         }
+        
+        .bold-list ul {
+            list-style-type: disc; /* Keeps inner lists as bullet points */
+            padding-left: 20px; /* Adds spacing for hierarchy */
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
