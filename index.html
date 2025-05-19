@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Student Housing Guide</title>
     <style>
+        ol {
+            list-style-type: none;
+            counter-reset: list-counter;
+        }
+        li {
+            counter-increment: list-counter;
+        }
+        li::before {
+            content: counter(list-counter) ". ";
+            font-weight: bold;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -469,17 +480,17 @@
                 <div class="media-block__content">
                     <h3><strong>Government Interventions in International Student Housing: Support, Regulation, and Affordability</strong></h3>
                     <ol>
-                        <ul><b>1. How can international students find support from the government in avoiding and overcoming poor living conditions in Australia?</b></ul>
+                        <li><b>How can international students find support from the government in avoiding and overcoming poor living conditions in Australia?</b></li>
                             <ul>
                                 <li>Free Financial Counselling</li>
                                 <li>International Student Accommodation Subsidy</li>
                             </ul>
-                        <ul><b>2. What role should the government play in regulating student housing conditions?</b></ul>
+                        <li><b>2. What role should the government play in regulating student housing conditions?</b></li>
                             <ul>
                                 <li>Introduce minimum housing standards for student rentals.</li>
                                 <li>Incentivise landlords</li>
                             </ul>
-                        <ul><b>3. How can policymakers address the rising cost of student rent in college towns?</b></ul>
+                        <li><b>How can policymakers address the rising cost of student rent in college towns?</b></li>
                             <ul>
                                 <li>Mandatory Inclusion of Student Needs in Local Housing Planning</li>
                             </ul>
