@@ -212,7 +212,45 @@
             color: white;
         }
 
+        /* Media Block Component - Reusable template */
+        .media-block {
+            display: flex;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            align-items: flex-start;
+        }
+
+        .media-block__content {
+            flex: 1;
+        }
+
+        .media-block__image {
+            flex: 1;
+        }
+
+        .media-block__image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        /* Right-aligned variation (image on right on desktop) */
+        .media-block--right {
+            flex-direction: row-reverse;
+        }
+        
         @media (max-width: 768px) {
+            .media-block {
+                flex-direction: column;
+            }
+            .media-block--right {
+                flex-direction: column;
+            }
+            
+            .media-block__image {
+                width: 100%;
+            }
             .resources-list {
                 columns: 1;
             }
