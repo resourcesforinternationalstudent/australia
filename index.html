@@ -310,6 +310,12 @@
                 width: 95%;
                 margin: 10% auto;
             }
+            .slideshow-arrow {
+              padding: 10px;
+              width: 40px;
+              height: 40px;
+              font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -460,6 +466,42 @@
                     </ol>
                 </div>
             </div>
+        </section>
+
+        <section class="image-slideshow">
+          <h2 class="slideshow-title">Image Gallery</h2>
+          
+          <div class="slideshow-container">
+            <button class="slideshow-arrow prev-arrow" aria-label="Previous image">&#10094;</button>
+            
+            <div class="slides">
+              <div class="slide active">
+                <a href="https://example.com/link1" target="_blank" class="slide-link">
+                  <img src="image1.jpg" alt="Description of image 1">
+                </a>
+              </div>
+              <div class="slide">
+                <a href="https://example.com/link2" target="_blank" class="slide-link">
+                  <img src="image2.jpg" alt="Description of image 2">
+                </a>
+              </div>
+              <div class="slide">
+                <a href="https://example.com/link3" target="_blank" class="slide-link">
+                  <img src="image3.jpg" alt="Description of image 3">
+                </a>
+              </div>
+              <!-- Add more slides as needed -->
+            </div>
+            
+            <button class="slideshow-arrow next-arrow" aria-label="Next image">&#10095;</button>
+          </div>
+          
+          <div class="slide-indicators">
+            <button class="indicator active" aria-label="Go to image 1"></button>
+            <button class="indicator" aria-label="Go to image 2"></button>
+            <button class="indicator" aria-label="Go to image 3"></button>
+            <!-- Add more indicators as needed -->
+          </div>
         </section>
 
 
