@@ -1451,9 +1451,22 @@
         }
         }
 
+        // function toggleSubmenu(element) {
+        //     let submenu = element.nextElementSibling;
+        //     submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        // }
         function toggleSubmenu(element) {
-            let submenu = element.nextElementSibling;
+            const submenu = element.nextElementSibling;
             submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            
+            // Close other submenus when opening a new one
+            if (submenu.style.display === "block") {
+                document.querySelectorAll('.submenu').forEach(menu => {
+                if (menu !== submenu && menu.style.display === "block") {
+                    menu.style.display = "none";
+                }
+                });
+            }
         }
 
        
