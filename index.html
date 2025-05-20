@@ -53,7 +53,8 @@
 
         /* side panel */
         .sidepanel  {
-        /* width: 50vw; */
+        width: 50vw;
+
         position: fixed;
         z-index: 1;
         height: 250px;
@@ -592,11 +593,11 @@
           z-index: 1;
         }
         
-        @media (max-width: 1024px) {
+        /* @media (max-width: 1024px) {
             .sidepanel {
-                width: 512px; /* Half of 1024px */
+                width: 512px; 
             }
-        }
+        } */
 
         @media (max-width: 768px) {
             .media-block {
@@ -633,16 +634,16 @@
                 top: 10px;
                 right: 10px;
             }
-            .sidepanel {
-                width: 384px; /* Half of 768px */
-            }
+            /* .sidepanel {
+                width: 384px; 
+            } */
         }
 
-        @media (max-width: 480px) {
+        /* @media (max-width: 480px) {
             .sidepanel {
-                width: 240px; /* Half of 480px */
+                width: 240px; 
             }
-        }
+        } */
     </style>
 </head>
 <body>
@@ -1399,6 +1400,16 @@
         // });
         // });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            let panel = document.getElementById("mySidepanel");
+
+            // Ensure it's closed when first loaded
+            if (!sessionStorage.getItem("sidepanelOpen")) {
+                panel.style.width = "0";
+                panel.style.right = "-250px";
+            }
+        });
+        
         function openNav() {
         let panel = document.getElementById("mySidepanel");
         panel.style.width = "250px";
