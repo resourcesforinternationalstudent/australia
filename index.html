@@ -30,79 +30,87 @@
         visibility: visible;
         }
 
-        /* Sidepanel Styles */
-        .sidepanel {
-        width: 250px;
+        /* submenu */
+        .submenu {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        .submenu-toggle {
+            cursor: pointer;
+            color: #f1f1f1;
+            display: block;
+            padding: 8px;
+            background: #222;
+        }
+
+        .submenu-toggle:hover {
+            background: #444;
+        }
+
+
+        /* side panel */
+        .sidepanel  {
+        /* width: 0; */
         position: fixed;
-        z-index: 1000;
-        height: 100vh;
+        z-index: 1;
+        height: 250px;
         top: 0;
-        right: -250px; /* Start off-screen */
-        background-color: rgba(17, 17, 17, 0.95); /* Slightly more opaque */
+        right: 0; /* Move to the right */
+        /* background-color: #111; */
+        background: rgba(17, 17, 17, 0.8); /* 50% opacity */
         overflow-x: hidden;
-        transition: right 0.5s ease; /* Animate right property instead of width */
+        transition: 0.5s;
         padding-top: 60px;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
         }
-
-        .sidepanel.open {
-        right: 0; /* Slide in when open */
-        }
-
         .openbtn {
         position: fixed;
         top: 20px;
-        right: 20px;
+        right: 20px; /* Move the button to the right */
         font-size: 20px;
         cursor: pointer;
         background-color: #111;
         color: white;
         padding: 10px 15px;
         border: none;
-        z-index: 1001; /* Above the sidepanel */
-        transition: right 0.5s ease;
         }
 
-        .sidepanel.open ~ .openbtn {
-        right: 270px; /* Move button left when panel opens */
+        .openbtn:hover {
+        background-color: #444;
         }
-
-        /* Submenu Styles */
-        .submenu {
-        display: none;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background: rgba(0,0,0,0.2);
-        }
-
-        .submenu.show {
-        display: block;
-        }
-
-        .submenu-toggle {
-        cursor: pointer;
-        color: #f1f1f1;
-        display: block;
+        .sidepanel a {
         padding: 8px 8px 8px 32px;
-        position: relative;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
         }
 
-        .submenu-toggle::after {
-        content: '▼';
+        .sidepanel a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidepanel .closebtn {
         position: absolute;
-        right: 15px;
-        font-size: 12px;
-        transition: transform 0.3s;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
         }
 
-        .submenu-toggle.active::after {
-        transform: rotate(180deg);
+        .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
         }
 
-        .submenu li a {
-        padding-left: 50px !important;
-        font-size: 18px !important;
+        .openbtn:hover {
+        background-color:#444;
         }
 
         /* floating menu */
