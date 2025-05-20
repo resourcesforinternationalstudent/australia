@@ -1435,6 +1435,9 @@
         panel.style.width = "0";
         panel.style.right = "-250px";
 
+        // Remove open state
+        sessionStorage.removeItem("sidepanelOpen");
+
         // Remove event listener after closing
         document.removeEventListener("click", closeNavOnOutsideClick);
         }
