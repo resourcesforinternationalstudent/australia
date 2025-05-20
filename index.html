@@ -16,7 +16,7 @@
         padding: 10px;
         margin: 0;
         border-radius: 8px;
-        z-index: 9999; /* Ensure it's above other elements */
+        z-index: 9999;
         pointer-events: auto;
         }
 
@@ -24,32 +24,41 @@
         background: #0066cc;
         color: white;
         border: none;
-        padding: 10px;
+        padding: 10px 15px;
         font-size: 1.2rem;
         cursor: pointer;
+        border-radius: 4px;
         }
 
         .menu-links {
         display: none;
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 10px 0 0 0;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        min-width: 150px;
+        }
+
+        .menu-links.show {
+        display: block;
         }
 
         .menu-links li {
-        margin: 5px 0;
+        margin: 0;
         }
 
         .menu-links a {
-        color: white;
+        color: #333;
         text-decoration: none;
         display: block;
-        padding: 8px;
-        background: #004c99;
+        padding: 8px 15px;
+        transition: background 0.2s;
         }
 
         .menu-links a:hover {
-        background: #003366;
+        background: #f0f0f0;
         }
 
 
@@ -1129,27 +1138,27 @@
         }
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuToggle = document.querySelector(".menu-toggle");
-            if (menuToggle) {
-                menuToggle.addEventListener("click", function() {
-                    const menu = document.querySelector(".menu-links");
-                    if (menu) {
-                        menu.style.display = menu.style.display === "block" ? "none" : "block";
-                    }
-                });
-            }
-        });
-        document.addEventListener("click", function(event) {
-            const menu = document.querySelector(".menu-links");
-            const menuToggle = document.querySelector(".menu-toggle");
+        document.addEventListener('DOMContentLoaded', function() {
+        // Floating menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
+        
+        if (menuToggle && menuLinks) {
+            menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event from bubbling up
+            menuLinks.classList.toggle('show');
+            });
             
-            if (menu && menuToggle && 
-                !menu.contains(event.target) && 
-                !menuToggle.contains(event.target) &&
-                menu.style.display === "block") {
-                menu.style.display = "none";
-            }
+            // Close menu when clicking outside
+            document.addEventListener('click', function() {
+            menuLinks.classList.remove('show');
+            });
+            
+            // Prevent menu from closing when clicking inside it
+            menuLinks.addEventListener('click', function(e) {
+            e.stopPropagation();
+            });
+        }
         });
 
 
