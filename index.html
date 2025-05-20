@@ -1242,6 +1242,16 @@
         }
         });
 
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px"; // Adjust width for visibility
+            document.getElementById("mySidepanel").style.right = "0"; // Ensure it's positioned correctly
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0"; // Collapse the panel
+            document.getElementById("mySidepanel").style.right = "-250px"; // Move it off-screen
+        }
+
     </script>
     <!-- External JS reference at bottom -->
     
