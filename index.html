@@ -1029,13 +1029,14 @@
             };
             modalIndicatorContainer.appendChild(indicator);
         }
-        document.addEventListener('DOMContentLoaded', function() {
-          // Apply background images from data attributes
-          const bgSections = document.querySelectorAll('section[data-bg-image]');
-          bgSections.forEach(section => {
-            const imageUrl = section.getAttribute('data-bg-image');
-            section.style.backgroundImage = imageUrl;
-          });
+        document.addEventListener('DOMContentLoaded', function () {
+        let sidebarToggle = document.querySelector(".sidebar-toggle");
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener("click", function () {
+            let sidebar = document.querySelector(".sidebar");
+            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+            });
+        }
         });
 
         function openPopup(imgSrc) {
