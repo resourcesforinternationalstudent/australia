@@ -1410,13 +1410,24 @@
             }
         });
         
-        function openNav() {
-        let panel = document.getElementById("mySidepanel");
-        panel.style.width = "250px";
-        panel.style.right = "0";
+        // function openNav() {
+        // let panel = document.getElementById("mySidepanel");
+        // panel.style.width = "250px";
+        // panel.style.right = "0";
 
-        // Add event listener to detect outside clicks
-        document.addEventListener("click", closeNavOnOutsideClick);
+        // // Add event listener to detect outside clicks
+        // document.addEventListener("click", closeNavOnOutsideClick);
+        // }
+        function openNav() {
+            let panel = document.getElementById("mySidepanel");
+            panel.style.width = "250px";
+            panel.style.right = "0";
+
+            // Save open state only after interaction
+            sessionStorage.setItem("sidepanelOpen", "true");
+
+            // Add event listener to detect outside clicks
+            document.addEventListener("click", closeNavOnOutsideClick);
         }
 
         function closeNav() {
