@@ -7,6 +7,49 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+        .sidebar {
+        position: fixed;
+        left: -250px; /* Hidden initially */
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: #333;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        }
+
+        .sidebar-toggle {
+        position: absolute;
+        top: 10px;
+        right: -50px;
+        background: #0066cc;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        }
+
+        .nav-links {
+        list-style: none;
+        padding: 0;
+        }
+
+        .nav-links li {
+        margin: 15px 0;
+        }
+
+        .nav-links a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        background: #004c99;
+        }
+
+        .nav-links a:hover {
+        background: #003366;
+        }
 
         /* Collapsible nav */
         .collapsible-nav {
@@ -428,6 +471,17 @@
             <p>Avoiding Poor Living Conditions: A Student’s Guide to Wellbeing & Academic Success in Australia</p>
         </div>
         
+        <div class="sidebar">
+        <button class="sidebar-toggle">☰ Menu</button>
+        <ul class="nav-links">
+            <li><a href="#housing">Housing</a></li>
+            <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#healthcare">Healthcare</a></li>
+            <li><a href="#legal">Legal</a></li>
+            <li><a href="#transport">Transport</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+        </div>
 
         <!-- Sticky Navigation Bar -->
 
@@ -998,6 +1052,10 @@
             navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
         });
 
+        document.querySelector(".sidebar-toggle").addEventListener("click", function () {
+            let sidebar = document.querySelector(".sidebar");
+            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+        });
     </script>
     <!-- External JS reference at bottom -->
     
