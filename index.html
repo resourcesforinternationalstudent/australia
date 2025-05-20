@@ -1400,14 +1400,28 @@
         // });
         // });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            let panel = document.getElementById("mySidepanel");
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     let panel = document.getElementById("mySidepanel");
 
-            // Ensure it's closed when first loaded
-            if (!sessionStorage.getItem("sidepanelOpen")) {
-                panel.style.width = "0";
-                panel.style.right = "-250px";
-            }
+        //     // Ensure it's closed when first loaded
+        //     if (!sessionStorage.getItem("sidepanelOpen")) {
+        //         panel.style.width = "0";
+        //         panel.style.right = "-250px";
+        //     }
+        // });
+
+        // Initialize sidepanel state
+        document.addEventListener("DOMContentLoaded", function() {
+            // Force close on initial load
+            closeNav();
+            
+            // Set up submenu toggles
+            document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleSubmenu(this);
+                });
+            });
         });
         
         // function openNav() {
