@@ -7,7 +7,30 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+        /* tooltip */
+        .tooltip {
+        position: relative;
+        text-decoration: none;
+        }
 
+        .tooltip .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        background: black;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        }
+
+        .tooltip:hover .tooltip-text {
+        visibility: visible;
+        }
+
+        /* submenu */
         .submenu {
             display: none;
             list-style: none;
@@ -647,7 +670,8 @@
 
         <a href="javascript:void(0)" class="submenu-toggle" onclick="toggleSubmenu(this)">Student Challenges ▼</a>
         <ul class="submenu">
-            <li><a href="#Challenges_faced_by_International_Students" onclick="toggleSubmenu(this)">Challenges faced by International Students</a></li>
+            <li>
+                <a href="#Challenges_faced_by_International_Students" onclick="toggleSubmenu(this)" class="tooltip">Challenges faced by International Students<span class="tooltip-text">Challenges faced by International Students</span></a></li>
             <li><a href="#A_Guide_for_Future_International_Students" onclick="toggleSubmenu(this)">A Guide for Future International Students</a></li>
             <li><a href="#Tips_to_Avoid_Poor_Living_Conditions" onclick="toggleSubmenu(this)">Tips to Avoid Poor Living Conditions</a></li>
         </ul>
