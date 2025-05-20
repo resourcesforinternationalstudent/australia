@@ -569,6 +569,12 @@
           z-index: 1;
         }
         
+        @media (max-width: 1024px) {
+            .sidepanel {
+                width: 512px; /* Half of 1024px */
+            }
+        }
+
         @media (max-width: 768px) {
             .media-block {
                 flex-direction: column;
@@ -606,6 +612,12 @@
             }
             .sidepanel {
                 width: 384px; /* Half of 768px */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidepanel {
+                width: 240px; /* Half of 480px */
             }
         }
     </style>
