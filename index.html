@@ -7,6 +7,41 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+
+        /* Floating Breadcrumb : start */
+        .breadcrumb {
+          position: sticky;
+          top: 60px; /* Height of sticky-nav */
+          background: rgba(255,255,255,0.95);
+          padding: 0.8rem 2rem;
+          z-index: 90;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+          font-size: 0.9rem;
+        }
+        
+        .breadcrumb ul {
+          display: flex;
+          gap: 0.8rem;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+          content: "›";
+          margin-left: 0.8rem;
+          color: #999;
+        }
+        
+        .breadcrumb a {
+          color: #0066cc;
+          text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+          text-decoration: underline;
+        }
+        /* Floating Breadcrumb : end */
         .apa-style {
             list-style-type: none;
             padding-left: 0;
