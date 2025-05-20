@@ -1348,48 +1348,48 @@
         });
 
 
-        // Sidepanel functions
-        let isPanelOpen = false;
+        // // Sidepanel functions
+        // let isPanelOpen = false;
 
-        function openNav() {
-        const panel = document.getElementById("mySidepanel");
-        panel.classList.add("open");
-        isPanelOpen = true;
-        document.addEventListener('click', closeOnOutsideClick);
-        }
+        // function openNav() {
+        // const panel = document.getElementById("mySidepanel");
+        // panel.classList.add("open");
+        // isPanelOpen = true;
+        // document.addEventListener('click', closeOnOutsideClick);
+        // }
 
-        function closeNav() {
-        const panel = document.getElementById("mySidepanel");
-        panel.classList.remove("open");
-        isPanelOpen = false;
-        document.removeEventListener('click', closeOnOutsideClick);
-        }
+        // function closeNav() {
+        // const panel = document.getElementById("mySidepanel");
+        // panel.classList.remove("open");
+        // isPanelOpen = false;
+        // document.removeEventListener('click', closeOnOutsideClick);
+        // }
 
-        function closeOnOutsideClick(event) {
-        const panel = document.getElementById("mySidepanel");
-        const button = document.querySelector(".openbtn");
+        // function closeOnOutsideClick(event) {
+        // const panel = document.getElementById("mySidepanel");
+        // const button = document.querySelector(".openbtn");
         
-        if (!panel.contains(event.target) && event.target !== button) {
-            closeNav();
-        }
-        }
+        // if (!panel.contains(event.target) && event.target !== button) {
+        //     closeNav();
+        // }
+        // }
 
-        // Submenu functions
-        function toggleSubmenu(element) {
-        element.classList.toggle("active");
-        const submenu = element.nextElementSibling;
-        submenu.classList.toggle("show");
+        // // Submenu functions
+        // function toggleSubmenu(element) {
+        // element.classList.toggle("active");
+        // const submenu = element.nextElementSibling;
+        // submenu.classList.toggle("show");
         
-        // Close other submenus when opening a new one
-        if (submenu.classList.contains("show")) {
-            document.querySelectorAll('.submenu').forEach(menu => {
-            if (menu !== submenu && menu.classList.contains("show")) {
-                menu.classList.remove("show");
-                menu.previousElementSibling.classList.remove("active");
-            }
-            });
-        }
-        }
+        // // Close other submenus when opening a new one
+        // if (submenu.classList.contains("show")) {
+        //     document.querySelectorAll('.submenu').forEach(menu => {
+        //     if (menu !== submenu && menu.classList.contains("show")) {
+        //         menu.classList.remove("show");
+        //         menu.previousElementSibling.classList.remove("active");
+        //     }
+        //     });
+        // }
+        // }
 
         // // Initialize
         // document.addEventListener('DOMContentLoaded', function() {
@@ -1399,44 +1399,44 @@
         // });
         // });
 
-        // function openNav() {
-        // let panel = document.getElementById("mySidepanel");
-        // panel.style.width = "250px";
-        // panel.style.right = "0";
+        function openNav() {
+        let panel = document.getElementById("mySidepanel");
+        panel.style.width = "250px";
+        panel.style.right = "0";
 
-        // // Add event listener to detect outside clicks
-        // document.addEventListener("click", closeNavOnOutsideClick);
-        // }
+        // Add event listener to detect outside clicks
+        document.addEventListener("click", closeNavOnOutsideClick);
+        }
 
-        // function closeNav() {
-        // let panel = document.getElementById("mySidepanel");
-        // panel.style.width = "0";
-        // panel.style.right = "-250px";
+        function closeNav() {
+        let panel = document.getElementById("mySidepanel");
+        panel.style.width = "0";
+        panel.style.right = "-250px";
 
-        // // Remove event listener after closing
-        // document.removeEventListener("click", closeNavOnOutsideClick);
-        // }
+        // Remove event listener after closing
+        document.removeEventListener("click", closeNavOnOutsideClick);
+        }
 
-        // function closeNavOnOutsideClick(event) {
-        // let panel = document.getElementById("mySidepanel");
-        // let button = document.querySelector(".openbtn");
+        function closeNavOnOutsideClick(event) {
+        let panel = document.getElementById("mySidepanel");
+        let button = document.querySelector(".openbtn");
 
-        // if (!panel.contains(event.target) && !button.contains(event.target)) {
-        //     closeNav();
-        // }
-        // }
+        if (!panel.contains(event.target) && !button.contains(event.target)) {
+            closeNav();
+        }
+        }
 
-        // function toggleSubmenu(element) {
-        //     let submenu = element.nextElementSibling;
-        //     submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-        // }
+        function toggleSubmenu(element) {
+            let submenu = element.nextElementSibling;
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
 
-        // function toggleSubmenu(element) {
-        //     let submenu = element.parentElement.querySelector(".submenu"); 
-        //     if (submenu) {
-        //         submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-        //     }
-        // }
+        function toggleSubmenu(element) {
+            let submenu = element.parentElement.querySelector(".submenu"); 
+            if (submenu) {
+                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            }
+        }
         // document.addEventListener("DOMContentLoaded", function () {
         //     let toggles = document.querySelectorAll(".submenu-toggle");
 
