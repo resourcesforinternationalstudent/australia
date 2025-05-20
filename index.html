@@ -1431,15 +1431,20 @@
         }
 
         function closeNav() {
-        let panel = document.getElementById("mySidepanel");
-        panel.style.width = "0";
-        panel.style.right = "-250px";
+            let panel = document.getElementById("mySidepanel");
+            panel.style.width = "0";
+            panel.style.right = "-250px";
 
-        // Remove open state
-        sessionStorage.removeItem("sidepanelOpen");
+            // Remove open state
+            sessionStorage.removeItem("sidepanelOpen");
 
-        // Remove event listener after closing
-        document.removeEventListener("click", closeNavOnOutsideClick);
+            // Remove event listener after closing
+            document.removeEventListener("click", closeNavOnOutsideClick);
+
+            // Also close all submenus when closing panel
+            document.querySelectorAll('.submenu').forEach(menu => {
+                menu.style.display = 'none';
+            });
         }
 
         function closeNavOnOutsideClick(event) {
