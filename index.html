@@ -992,8 +992,14 @@
         function closePopup() {
             document.getElementById('imagePopup').style.display = 'none';
         }
+
+        document.querySelector(".nav-toggle").addEventListener("click", function () {
+            let navLinks = document.querySelector(".nav-links");
+            navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
+        });
+
     </script>
     <!-- External JS reference at bottom -->
-    <script src="js/slideshow.js"></script>
+    
 </body>
 </html>
