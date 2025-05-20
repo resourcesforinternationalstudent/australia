@@ -7,6 +7,67 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+        /* side panel */
+        .sidepanel  {
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        height: 250px;
+        top: 0;
+        right: 0; /* Move to the right */
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+        .openbtn {
+        position: fixed;
+        top: 20px;
+        right: 20px; /* Move the button to the right */
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        }
+
+        .openbtn:hover {
+        background-color: #444;
+        }
+        .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidepanel a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        }
+
+        .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        }
+
+        .openbtn:hover {
+        background-color:#444;
+        }
+
         /* floating menu */
         .floating-menu {
         position: fixed;
@@ -525,6 +586,20 @@
     </style>
 </head>
 <body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+    <!-- <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+        <h2>Collapsed Sidebar</h2>
+        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    </div>
     <div class="floating-menu">
         <button class="menu-toggle">☰ Menu</button>
         <ul class="menu-links">
@@ -535,7 +610,7 @@
             <li><a href="#transport">Transport</a></li>
             <li><a href="#education">Education</a></li>
         </ul>
-    </div>
+    </div> -->
     <header>
         <div class="container">
             <h1>International Student Housing Guide</h1>
