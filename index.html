@@ -7,6 +7,36 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+          position: sticky;
+          top: 0;
+          background: #0066cc;
+          padding: 1rem;
+          z-index: 100;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+          color: #ffcc00;
+          text-decoration: underline;
+        }
 
         /* Floating Breadcrumb : start */
         .breadcrumb {
@@ -385,9 +415,10 @@
             <h1>International Student Housing Guide</h1>
             <p>Avoiding Poor Living Conditions: A Student’s Guide to Wellbeing & Academic Success in Australia</p>
         </div>
-        <!-- Navigation Bar -->
-        <div class="navbar">
-          <nav>
+        
+
+        <!-- Sticky Navigation Bar -->
+          <nav class="sticky-nav">
             <ul class="nav-links">
               <li><a href="#housing">Housing</a></li>
               <li><a href="#jobs">Jobs</a></li>
@@ -397,7 +428,15 @@
               <li><a href="#education">Education</a></li>
             </ul>
           </nav>
-        </div>
+
+        <!-- Floating Breadcrumb -->
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="https://resourcesforinternationalstudents.github.io/">Home</a></li>
+              <li><a href="https://resourcesforinternationalstudents.github.io/australia/">Australia</a></li>
+              <li>Housing Guide</li>
+            </ul>
+          </div>
     </header>
 
     <div class="container">
@@ -782,6 +821,35 @@
     
         
     <script>
+        // Smooth scroll only - won't interfere with other scripts
+        function initSmoothScroll() {
+          const links = document.querySelectorAll('.nav-links a, .breadcrumb a');
+          
+          links.forEach(anchor => {
+            // Skip if already has a click handler
+            if (anchor.getAttribute('data-smooth-scroll') !== 'true') {
+              anchor.setAttribute('data-smooth-scroll', 'true');
+              
+              anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                  e.preventDefault();
+                  const target = document.querySelector(targetId);
+                  if (target) {
+                    window.scrollTo({
+                      top: target.offsetTop - 120,
+                      behavior: 'smooth'
+                    });
+                  }
+                }
+              });
+            }
+          });
+        }
+        
+        // Run after DOM loads
+        document.addEventListener('DOMContentLoaded', initSmoothScroll);
+        
         // Inline Slideshow Functionality
         let slideIndex = 1;
         showSlides(slideIndex);
