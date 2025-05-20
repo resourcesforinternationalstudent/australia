@@ -1129,9 +1129,27 @@
         }
         });
 
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-        let menu = document.querySelector(".menu-links");
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            if (menuToggle) {
+                menuToggle.addEventListener("click", function() {
+                    const menu = document.querySelector(".menu-links");
+                    if (menu) {
+                        menu.style.display = menu.style.display === "block" ? "none" : "block";
+                    }
+                });
+            }
+        });
+        document.addEventListener("click", function(event) {
+            const menu = document.querySelector(".menu-links");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (menu && menuToggle && 
+                !menu.contains(event.target) && 
+                !menuToggle.contains(event.target) &&
+                menu.style.display === "block") {
+                menu.style.display = "none";
+            }
         });
 
 
