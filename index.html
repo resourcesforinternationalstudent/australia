@@ -1437,16 +1437,16 @@
                 submenu.style.display = submenu.style.display === "block" ? "none" : "block";
             }
         }
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     let toggles = document.querySelectorAll(".submenu-toggle");
+        document.addEventListener("DOMContentLoaded", function () {
+            let toggles = document.querySelectorAll(".submenu-toggle");
 
-        //     toggles.forEach(toggle => {
-        //         toggle.addEventListener("click", function () {
-        //             let submenu = this.nextElementSibling;
-        //             submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-        //         });
-        //     });
-        // });
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function () {
+                    let submenu = this.nextElementSibling;
+                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
 
 
 
