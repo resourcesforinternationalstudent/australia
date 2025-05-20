@@ -1052,10 +1052,14 @@
             navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
         });
 
-        document.querySelector(".sidebar-toggle").addEventListener("click", function () {
-            let sidebar = document.querySelector(".sidebar");
-            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
-        });
+        let sidebarToggle = document.querySelector(".sidebar-toggle");
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener("click", function () {
+                    let sidebar = document.querySelector(".sidebar");
+                    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+            });
+        }
+
     </script>
     <!-- External JS reference at bottom -->
     
