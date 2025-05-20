@@ -7,12 +7,33 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
-            /* side panel */
-            .sidepanel  {
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            height: 250px;
+
+        .submenu {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        .submenu-toggle {
+            cursor: pointer;
+            color: #f1f1f1;
+            display: block;
+            padding: 8px;
+            background: #222;
+        }
+
+        .submenu-toggle:hover {
+            background: #444;
+        }
+
+
+        /* side panel */
+        .sidepanel  {
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        height: 250px;
         top: 0;
         right: 0; /* Move to the right */
         /* background-color: #111; */
@@ -587,7 +608,7 @@
     </style>
 </head>
 <body>
-    <div id="mySidepanel" class="sidepanel">
+    <!-- <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#about-section">About</a>
         <a href="#Challenges_faced_by_International_Students">Challenges faced by International Students</a>
@@ -604,7 +625,39 @@
         <a href="#Government_Interventions_in">Government Interventions in International Student Housing: Support, Regulation, and Affordability</a>
         <a href="#References">References</a>
         <a href="#id_contact">Contact</a>   
+    </div> -->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#about-section">About</a>
+
+        <a href="javascript:void(0)" class="submenu-toggle">Student Challenges ▼</a>
+        <ul class="submenu">
+            <li><a href="#Challenges_faced_by_International_Students">Challenges faced by International Students</a></li>
+            <li><a href="#A_Guide_for_Future_International_Students">A Guide for Future International Students</a></li>
+            <li><a href="#Tips_to_Avoid_Poor_Living_Conditions">Tips to Avoid Poor Living Conditions</a></li>
+        </ul>
+
+        <a href="javascript:void(0)" class="submenu-toggle">Housing Issues ▼</a>
+        <ul class="submenu">
+            <li><a href="#Finding_a_rental">Finding a rental</a></li>
+            <li><a href="#Overcrowding_and_Stress">Overcrowding and Stress</a></li>
+            <li><a href="#Sleep_Quality_as">Sleep Quality as an Academic Performance Factor</a></li>
+        </ul>
+
+        <a href="javascript:void(0)" class="submenu-toggle">University & Government Involvement ▼</a>
+        <ul class="submenu">
+            <li><a href="#Enhancing_Student_Wellbeing">Enhancing Student Wellbeing Through Housing</a></li>
+            <li><a href="#Impact_of_Inadequate">Impact on University Reputation</a></li>
+            <li><a href="#University_Initiatives_to">University Initiatives for Safe Housing</a></li>
+            <li><a href="#Promoting_and_Enforcing">Promoting Off-Campus Housing Standards</a></li>
+            <li><a href="#Supporting_Students_Facing">Supporting Students with High Rent Costs</a></li>
+            <li><a href="#Government_Interventions_in">Government Interventions in Student Housing</a></li>
+        </ul>
+
+        <a href="#References">References</a>
+        <a href="#id_contact">Contact</a>   
     </div>
+
 
     <button class="openbtn" onclick="openNav()">☰ Menu</button>  
     <!-- <div id="main">
@@ -1280,6 +1333,18 @@
             closeNav();
         }
         }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            let toggles = document.querySelectorAll(".submenu-toggle");
+
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function () {
+                    let submenu = this.nextElementSibling;
+                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+
 
 
     </script>
