@@ -630,21 +630,22 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#about-section">About</a>
 
-        <a href="javascript:void(0)" class="submenu-toggle">Student Challenges ▼</a>
+        <a href="javascript:void(0)" class="submenu-toggle" onclick="toggleSubmenu(this)">Student Challenges ▼</a>
         <ul class="submenu">
-            <li><a href="#Challenges_faced_by_International_Students">Challenges faced by International Students</a></li>
-            <li><a href="#A_Guide_for_Future_International_Students">A Guide for Future International Students</a></li>
-            <li><a href="#Tips_to_Avoid_Poor_Living_Conditions">Tips to Avoid Poor Living Conditions</a></li>
+            <li><a href="#Challenges_faced_by_International_Students" onclick="toggleSubmenu(this)">Challenges faced by International Students</a></li>
+            <li><a href="#A_Guide_for_Future_International_Students" onclick="toggleSubmenu(this)">A Guide for Future International Students</a></li>
+            <li><a href="#Tips_to_Avoid_Poor_Living_Conditions" onclick="toggleSubmenu(this)">Tips to Avoid Poor Living Conditions</a></li>
         </ul>
 
-        <a href="javascript:void(0)" class="submenu-toggle">Housing Issues ▼</a>
+
+        <a href="javascript:void(0)" class="submenu-toggle" onclick="toggleSubmenu(this)">Housing Issues ▼</a>
         <ul class="submenu">
             <li><a href="#Finding_a_rental">Finding a rental</a></li>
             <li><a href="#Overcrowding_and_Stress">Overcrowding and Stress</a></li>
             <li><a href="#Sleep_Quality_as">Sleep Quality as an Academic Performance Factor</a></li>
         </ul>
 
-        <a href="javascript:void(0)" class="submenu-toggle">University & Government Involvement ▼</a>
+        <a href="javascript:void(0)" class="submenu-toggle" onclick="toggleSubmenu(this)">University & Government Involvement ▼</a>
         <ul class="submenu">
             <li><a href="#Enhancing_Student_Wellbeing">Enhancing Student Wellbeing Through Housing</a></li>
             <li><a href="#Impact_of_Inadequate">Impact on University Reputation</a></li>
@@ -1333,17 +1334,28 @@
             closeNav();
         }
         }
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            let toggles = document.querySelectorAll(".submenu-toggle");
 
-            toggles.forEach(toggle => {
-                toggle.addEventListener("click", function () {
-                    let submenu = this.nextElementSibling;
-                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                });
-            });
-        });
+        function toggleSubmenu(element) {
+            let submenu = element.nextElementSibling;
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
+
+        // function toggleSubmenu(element) {
+        //     let submenu = element.parentElement.querySelector(".submenu"); 
+        //     if (submenu) {
+        //         submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        //     }
+        // }
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     let toggles = document.querySelectorAll(".submenu-toggle");
+
+        //     toggles.forEach(toggle => {
+        //         toggle.addEventListener("click", function () {
+        //             let submenu = this.nextElementSibling;
+        //             submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        //         });
+        //     });
+        // });
 
 
 
