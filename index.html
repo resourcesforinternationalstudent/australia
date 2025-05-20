@@ -7,42 +7,47 @@
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
-        /* Sticky Navigation Bar */
-        
 
-        body {
-        padding-top: 50px; /* Adjust to prevent overlap */
+        /* Collapsible nav */
+        .collapsible-nav {
+        position: relative;
+        width: 100%;
+        background: #0066cc;
+        padding: 1rem;
         }
-        .sticky-nav {
-          position: fixed;
-          top: 0;
-          background: #0066cc;
-          padding: 1rem;
-          z-index: 100;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        .nav-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
         }
-        
+
         .nav-links {
-          display: block;
-          justify-content: center;
-          gap: 1.5rem;
-          list-style: none;
-          margin: 0;
-          padding: 0;
+        display: none; /* Initially hidden */
+        list-style: none;
+        padding: 0;
         }
-        
+
+        .nav-links li {
+        margin: 10px 0;
+        }
+
         .nav-links a {
-          display: block;
-          color: white;
-          text-decoration: none;
-          font-weight: 500;
-          transition: all 0.3s ease;
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        background: #004c99;
+        }
+
+        .nav-links a:hover {
+        background: #003366;
         }
         
-        .nav-links a:hover {
-          color: #ffcc00;
-          text-decoration: underline;
-        }
+        
+        
 
         /* Floating Breadcrumb : start */
         .breadcrumb {
@@ -425,7 +430,20 @@
         
 
         <!-- Sticky Navigation Bar -->
-          <nav class="sticky-nav">
+
+        <nav class="collapsible-nav">
+            <button class="nav-toggle">☰ Menu</button>
+            <ul class="nav-links">
+                <li><a href="#housing">Housing</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#healthcare">Healthcare</a></li>
+                <li><a href="#legal">Legal</a></li>
+                <li><a href="#transport">Transport</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+
+          <!-- <nav class="sticky-nav">
             <ul class="nav-links">
               <li><a href="#housing">Housing</a></li>
               <li><a href="#jobs">Jobs</a></li>
@@ -434,7 +452,7 @@
               <li><a href="#transport">Transport</a></li>
               <li><a href="#education">Education</a></li>
             </ul>
-          </nav>
+          </nav> -->
 
         <!-- Floating Breadcrumb -->
           <!-- <div class="breadcrumb">
