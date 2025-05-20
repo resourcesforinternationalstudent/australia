@@ -1243,14 +1243,32 @@
         });
 
         function openNav() {
-            document.getElementById("mySidepanel").style.width = "250px"; // Adjust width for visibility
-            document.getElementById("mySidepanel").style.right = "0"; // Ensure it's positioned correctly
+        let panel = document.getElementById("mySidepanel");
+        panel.style.width = "250px";
+        panel.style.right = "0";
+
+        // Add event listener to detect outside clicks
+        document.addEventListener("click", closeNavOnOutsideClick);
         }
 
         function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0"; // Collapse the panel
-            document.getElementById("mySidepanel").style.right = "-250px"; // Move it off-screen
+        let panel = document.getElementById("mySidepanel");
+        panel.style.width = "0";
+        panel.style.right = "-250px";
+
+        // Remove event listener after closing
+        document.removeEventListener("click", closeNavOnOutsideClick);
         }
+
+        function closeNavOnOutsideClick(event) {
+        let panel = document.getElementById("mySidepanel");
+        let button = document.querySelector(".openbtn");
+
+        if (!panel.contains(event.target) && !button.contains(event.target)) {
+            closeNav();
+        }
+        }
+
 
     </script>
     <!-- External JS reference at bottom -->
