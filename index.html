@@ -57,13 +57,13 @@
 
         position: fixed;
         z-index: 1;
-        height: 250px;
+        height: 100vh;
         top: 0;
-        right: 0; /* Move to the right */
+        right: -50vw; /* Start off-screen */
         /* background-color: #111; */
         background: rgba(17, 17, 17, 0.8); /* 50% opacity */
         overflow-x: hidden;
-        transition: 0.5s;
+        transition: right 0.5s ease; /* Changed from width to right */
         padding-top: 60px;
         }
         .openbtn {
