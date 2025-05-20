@@ -1470,6 +1470,12 @@
             });
         });
 
+        // Ensure panel stays closed on refresh
+        document.addEventListener("DOMContentLoaded", function () {
+            if (sessionStorage.getItem("sidepanelOpen") !== "true") {
+                closeNav(); // Ensure it's closed on load
+            }
+        });
 
 
     </script>
