@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Student Housing Guide</title>
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* tooltip */
         .tooltip {
@@ -337,12 +338,21 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Open Sans', sans-serif; /* Body text */
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #333;
             background-color: #f9f9f9;
+        }
+        h1, h2, h3, .sidepanel a, .submenu-toggle {
+            font-family: 'Montserrat', sans-serif; /* Headers & navigation */
+            font-weight: 600; /* Semi-bold */
+        }
+
+        header h1 {
+            font-weight: 700; /* Bold for main title */
         }
         .container {
             max-width: 1000px;
