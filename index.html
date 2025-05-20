@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="assets/css/image_slideshow.css">
     <style>
         /* Sticky Navigation Bar */
+        nav {
+        position: fixed; /* Keeps navbar fixed */
+        top: 0; /* Sticks to the top */
+        width: 100%; /* Full width */
+        background-color: #333; /* Example background */
+        padding: 10px;
+        z-index: 1000; /* Ensures it stays above other elements */
+        }
+
+        body {
+        padding-top: 50px; /* Adjust to prevent overlap */
+        }
         .sticky-nav {
           position: sticky;
           top: 0;
